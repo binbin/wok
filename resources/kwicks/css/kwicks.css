@@ -1,0 +1,101 @@
+
+
+.kwicks {
+	display: block;
+	list-style-type: none;
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.kwicks.kwicks-processed  li {
+	margin: 0;
+	position: absolute;
+}
+.kwicks-horizontal li {
+	float: left;
+}
+.kwicks-horizontal .kwicks-first-child {
+	margin-left: 0;
+}
+
+.kwicks{width:100%;position:relative}
+
+.kwicks li{overflow:hidden;zoom:1;border:none;}
+.kwicks li a{float: left;cursor: pointer;}
+.kwicks li a .imgborder{padding:5px;background-color:#f2f2f2; text-decoration:none;display: block;/*position:relative;*/}
+.kwicks li a img{zoom:1;}
+.kwicks li a .imgbottomsqure{height: 6px;margin-top:8px;zoom:1;display: block;}
+
+
+
+
+
+
+
+.kwicks li a img.rec,.kwicks li span img.rec{
+	position: absolute;
+	width: 54px;
+	height: 25px;
+	left: 10px;
+	bottom: 20px;
+	border: none;
+}
+
+.kwicks li .extension{overflow:hidden;_float:left}
+.kwicks li .extension a{margin-right: 10px;float: left;}
+.kwicks li .extension a.last{margin-right:0;}
+
+.kwicks li dl{padding:0px 0px 0px 10px;overflow:hidden;margin-left:0px;zoom:1;}
+.kwicks li dd{color:#ccc; float:left;}
+
+
+
+.imgbottomsqure{background:url("../images/imgbottomsqure.png") repeat scroll 0 0 transparent;}
+
+/*红色*/
+.theme1 .imgbottomsqure {
+  background: none;
+  background-color: yellow;
+}
+
+/*黄色*/
+.theme2 .imgbottomsqure {
+  background: none;
+  background-color: #fff000;
+}
+
+/*橙色*/
+.theme3 .imgbottomsqure{
+  background: none;
+  background-color: #ffa800;
+}
+
+/*绿色*/
+.theme4 .imgbottomsqure {
+  background: none;
+  background-color: #56be60;
+}
+
+/*蓝色*/
+.theme5 .imgbottomsqure {
+  background: none;
+  background-color: #49c5ff;
+}
+
+/*紫色*/
+.theme6 .imgbottomsqure {
+  background: none;
+  background-color: #735bc3;
+}
+
+/*灰色*/
+.theme7 .imgbottomsqure {
+  background: none;
+  background-color: #4d4d4d;
+}
+
+
+
+
+

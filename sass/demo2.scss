@@ -1,0 +1,29 @@
+@import "compass/reset";
+@import "compass/typography/links/unstyled-link";
+@import "compass/css3";
+body{
+	width:100%;
+    .content{
+	   margin:0 auto;
+	   width:1440px;
+	   .top{
+ 			width:1440px;
+ 			height:765px;
+ 			background: url("../images/bg2.png") repeat scroll 0 0 transparent;
+	   }
+	   .bottom{
+			width:1440px;
+			height:217px;
+			background: url("../images/bg3.png") repeat scroll 0 0 transparent;
+	   }
+	   .rec{
+	        border:1px #cccccc solid;
+	        width:948px;
+	        padding:15px;
+	        margin:0 auto;
+            .rec-content{
+              width:950px;
+            }
+	   }
+	}
+}

@@ -1,0 +1,2 @@
+compass watch --trace
+pause

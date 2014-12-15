@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script src='./resources/jquery/jquery-1.9.1.min.js' type='text/javascript'></script>
+	<script type="text/javascript">
+        $(function(){
+            var listCount=6
+        	function change(index,src){
+                $('div').eq(index).find('button').click(function(){
+                	var id=$.trim($('div').eq(index).find('input:first').val())
+                	var width=$.trim($('div').eq(index).find('input:eq(1)').val())
+                    var listCount1=$.trim($('div').eq(index).find('input:last').val())
+                	if(id!==''&&width!==''&&listCount1!==''&&/\d+/.test(width)&&/\d+/.test(listCount1)){
+                           listCount=listCount1
+                           $('iframe')
+                           .eq(index)
+                           .width(width).attr('src',src+'?id='+id+'&listCount='+listCount)
+                           .height(width/listCount+45+14+'px')
+                	}else{
+                		alert('请输入正确的值')
+                	}
+                })
+                $('div').eq(index).keyup(function(event){
+                    if(event.keyCode==13){
+                    	$('div').eq(index).find('button').click()
+                    }
+                 })
+        	}
+        	change(0,'bfd_kw.html')
+        	change(1,'rec-static.html')
+        })
+	</script>
+</head>
+<body>
+	<div>
+		id:<input type="text" value="wangfujing_254177"/>
+	    宽度:<input type="text" value="800"/>
+        展示个数:<input type="text" value="6"/>
+	    <button style="cursor:pointer">更换</button> 
+	</div>
+	<iframe src="bfd_kw.html?id=wangfujing_254177" width="800px" 
+    /*
+    onload="this.height=parseInt(this.offsetWidth,10)/6+45+14+'px'"
+    */ 
+    frameborder="no" 
+    border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+    <br/><br/>
+    <div>
+	    id:<input type="text" value="wangfujing_254177"/>
+	    宽度:<input type="text" value="800"/>
+        展示个数:<input type="text" value="6"/>
+	    <button style="cursor:pointer">更换</button> 
+	</div>
+    <iframe src="rec-static.html?id=wangfujing_254177" width="800px" 
+    /*
+    onload="this.height=parseInt(this.offsetWidth,10)/6+45+14+'px'" 
+    */
+    frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+</body>
+</html>

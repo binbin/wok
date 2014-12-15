@@ -1,0 +1,200 @@
+.box {
+	width: 100%;
+	height: 200px;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+.box .title {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color: #333333;
+	border-bottom: 1px #cccccc dashed;
+	display: block;
+	margin-bottom: 15px;
+	cursor: default;
+}
+.box .title span {
+	padding-right: 15px;
+	border-right:1px solid #333333;
+}
+.box .title .first a{
+  margin-left: 0;
+}
+.box .title .last{
+	padding-right: 0;
+	border-right:none;
+}
+.box .title span a{
+	margin-left: 15px;
+	cursor: pointer;
+	color: #333333;
+}
+.box .title  .current a{
+	color: #dd0044;
+}
+.box ul, li, p, dl, dt, dd, a, img {
+	padding: 0px;
+	margin: 0px;
+}
+.box ul, li {
+	list-style: none;
+}
+.box a:link, a:visited, a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+.box .kwicks {
+	display: block;
+	list-style-type: none;
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.box .kwicks.kwicks-processed  li {
+	margin: 0;
+	position: absolute;
+}
+.box .kwicks-horizontal li {
+	float: left;
+}
+.box .kwicks-horizontal .kwicks-first-child {
+	margin-left: 0;
+}
+.box .kwicks {
+	width: 100%;
+	position: relative
+}
+.box .kwicks li {
+	overflow: hidden;
+	zoom: 1;
+	border: none;
+}
+.box .kwicks li a {
+	float: left;
+	cursor: pointer;
+	position: relative;
+	zoom: 1;
+}
+.box .kwicks li a .imgborder {
+	/*padding: 5px;*/
+	padding:3%;
+	text-decoration: none;
+	display: block;
+
+	    /*background-image:url("http://192.168.10.79:8080/wok/test-expend/bg-c.png"); */
+	    background-image:url("./test-expend/bg-c.png");
+		-moz-background-size: 100% 100%; 
+		-o-background-size: 100% 100%; 
+		-webkit-background-size: 100% 100%; 
+		background-size: 100% 100%; 
+		/*-moz-border-image: url("http://192.168.10.79:8080/wok/test-expend/bg-c.png") 0;*/
+		-moz-border-image: url("./test-expend/bg-c.png") 0; 
+		background-repeat:no-repeat\9; 
+		background-image:none\9; 
+		/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://192.168.10.79:8080/wok/test-expend/bg-c.png", sizingMethod='scale')\9; */
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="./test-expend/bg-c.png", sizingMethod='scale')\9; 
+}
+.box .kwicks li dl a .imgborder{
+	/*padding:5px;*/
+	padding: 3%;
+
+	text-decoration:none;
+	display: block;
+	    background-repeat: no-repeat;
+	    /*background-image:url("http://192.168.10.79:8080/wok/test-expend/bg-x.png"); */
+	    background-image:url("./test-expend/bg-x.png"); 
+		-moz-background-size: 100% 100%; 
+		-o-background-size: 100% 100%; 
+		-webkit-background-size: 100% 100%; 
+		background-size: 100% 100%; 
+		/*-moz-border-image: url("http://192.168.10.79:8080/wok/test-expend/bg-x.png") 0; */
+		-moz-border-image: url("./test-expend/bg-x.png") 0;
+		background-repeat:no-repeat\9; 
+		background-image:none\9; 
+		/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://192.168.10.79:8080/wok/test-expend/bg-x.png", sizingMethod='scale')\9;*/ 
+		filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="./test-expend/bg-x.png", sizingMethod='scale')\9; 
+}
+.box .kwicks li a img {
+	zoom: 1;
+	border: none;
+}
+.box .kwicks li a .imgbottomsqure {
+	/*height: 6px;
+	margin-top: 8px;*/
+	overflow: hidden;
+	height: 0;
+	zoom: 1;
+	display: block;
+ 
+	background: url(./test-expend/c.png);
+	position: absolute;
+	bottom: 0;
+}
+.box .kwicks li a img.rec, .kwicks li span img.rec {
+	position: absolute;
+	width: 54px;
+	height: 25px;
+	left: 10px;
+	bottom: 10px;
+	border: none;
+}
+.box .kwicks li .extension {
+	overflow: hidden;
+	_float: left
+}
+.box .kwicks li .extension a {
+	margin-right: 10px;
+	float: left;
+}
+.box .kwicks li .extension a.last {
+	margin-right: 0;
+}
+.box .kwicks li dl {
+	padding: 0px 0px 0px 10px;
+	overflow: hidden;
+	margin-left: 0px;
+	zoom: 1;
+}
+.box .kwicks li dd {
+	color: #ccc;
+	float: left;
+}
+.box .kwicks li .extension a.arrow{
+    width:11px;
+    cursor: default;
+}
+.box .kwicks li .extension a.arrow div{
+        width: 100%;
+        height:100%;
+        background-repeat: no-repeat;
+       /* background-image:url(http://192.168.10.79:8080/wok/test-expend/bg-arrow.png); */
+        background-image:url(./test-expend/bg-arrow.png); 
+		-moz-background-size: 100% 100%; 
+		-o-background-size: 100% 100%; 
+		-webkit-background-size: 100% 100%; 
+		background-size: 100% 100%; 
+		/*-moz-border-image: url(http://192.168.10.79:8080/wok/test-expend/bg-arrow.png) 0; */
+		-moz-border-image: url(./test-expend/bg-arrow.png) 0; 
+		background-repeat:no-repeat\9; 
+		background-image:none\9; 
+		/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://192.168.10.79:8080/wok/test-expend/bg-arrow.png', sizingMethod='scale')\9; */
+		filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./test-expend/bg-arrow.png', sizingMethod='scale')\9; 
+}
+.box .kwicks li img {
+	width: 100%;
+	height: 100%;
+}
+.box .outbox, .scrollItem {
+	width: 1350px;
+}
+.box .outbox {
+	position: relative;
+	overflow: hidden;
+}
+.box .outbox .items {
+	position: absolute;
+	height: 20000em;
+}

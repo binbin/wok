@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css">
+	<script src='./resources/jquery/jquery-1.9.1.min.js' type='text/javascript'></script>
+	<script type="text/javascript">
+      $(function(){
+      	$('#version').change(function(){
+           if($(this).val()==0){
+           	 $('#iframe').show()
+           	  $('#noiframe').hide()
+           }else{
+            	$('#iframe').hide()
+           	  $('#noiframe').show()
+           }
+      	}).change()
+      })
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="span8">
+				<h2>服饰搭配安装指南</h2>
+			</div>
+			<div class="span4">
+				<div style="padding: 25px 0 0 0;text-align: right;">
+					<a href="http://www.baifendian.com" style="color: #0088cc;text-decoration: none;"  target="_blank">
+						百分点公司
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span8">
+				<p class="lead">
+					本页面旨在让您快速安装<!-- <strong>固定效果</strong> -->固定效果的服饰搭配应用，如用更多需求，请与我们联系
+				</p>
+				<!--
+				<p class="lead">
+					请在下面选择您的安装方式(目前只有iframe)
+				</p>
+			--> 
+			   
+			    <h3>一、商品信息收录代码</h3>
+			
+			  <!--  <legend>一、商品信息收录代码</legend> -->
+
+			    <div class="row">
+			    	<div class="span1">
+			    		嵌入代码
+			    	</div>
+			    	<div class="span7">
+<pre>
+if(!_BFD.addItemFlag){		
+	//判断商品是否下架、添加商品、点击推荐请求、上传浏览行为
+	if(_store == 0||_price == 0||_del == true||_iid == '296393'||_iid == '299383'||_iid == '299381'||_iid == '288290'||_iid == '288291'||_iid == '288292'||BFD_Info.isgift == "true"){
+		//商品下架
+		_this.send(new $Core.inputs.RmItem(_iid));
+	}else{
+		//添加商品
+		var _attr = new $Core.inputs.JObject();
+		_attr.stk = parseInt(_store);
+		var add_item = new $Core.inputs.AddItem(_iid);
+		add_item.simg = _simg;
+		add_item.img = _bimg;
+		add_item.name = _name;
+		add_item.prc = _price;
+		add_item.mktp = _mprice;
+		add_item.memp = _vprice1;
+		add_item.vipp = _vprice2;
+		add_item.url = _link;
+		add_item.brd = _brand;
+		add_item.cat = _catid;
+		add_item.grp = _grid;
+		add_item.tag = _tag;
+		add_item.clr = _color;
+		add_item.stk = _store;
+		add_item.stkcnt = _store;
+		add_item.attr = _attr.toString();
+		
+		_this.send(add_item);
+		_BFD.addItemFlag = true;	
+	}
+}	
+</pre>
+                      <p>详细参数需要在对接实施环节，与我方研发沟通后确认。</p>
+			    	</div>
+			    </div>
+			    <h3>二、搭配内容展示代码</h3>
+			    <!-- <legend>二、搭配内容展示代码</legend> -->
+			    <p>
+					请在下面选择您的安装方式
+				</p>
+				<div class="row">
+					<div class="span3">
+						<legend>方式</legend>
+						<div class="controls">
+							<label class="select">
+								<p>安装方式</p>
+								<select id="version">
+									<option value="0">iframe(推荐)</option>
+									<option value="1">非iframe</option>
+								</select>
+							</label>
+						</div>
+					</div>
+					<div class="span5">
+						<legend>测试页面</legend>
+						<div class="control-group">
+							<p>Iframe</p>
+							<ul>
+								<li>
+									<a href="./demo.html" target="_blank">滑动展开&&静态展示</a>
+								</li>
+								
+							</ul>
+							<p>非Iframe</p>
+							<ul>
+								<li>
+									<a href="./jquery.bfd_kw.html" target="_blank">滑动展开(jquery)</a>
+								</li>
+								<li>
+									<a href="./bfd_kw.html" target="_blank">滑动展开(非jquery)</a>
+								</li>
+								<li>
+									<a href="./rec-static.html" target="_blank">静态展示</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<legend>Build</legend>
+                    <div id="iframe">
+						<div class="row">
+							<div class="span2">iframe嵌入代码-滑动展开</div>
+							<div class="span6">
+								<pre>
+&lt;iframe&nbsp;src=&quot;http://210.14.135.182:8091/wok/kw1.html?id=wangfujing_254177&quot;&nbsp;width=&quot;800px&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;onload=&quot;this.height=parseInt(this.offsetWidth,10)/6+45+14+&#39;px&#39;&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;frameborder=&quot;no&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;border=&quot;0&quot;&nbsp;marginwidth=&quot;0&quot;&nbsp;marginheight=&quot;0&quot;&nbsp;scrolling=&quot;no&quot;&nbsp;allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;
+								</pre>
+							</div>
+						</div>
+						<div class="row">
+							<div class="span2">iframe嵌入代码-静态展示</div>
+							<div class="span6">
+								<pre>
+&lt;iframe&nbsp;src=&quot;http://210.14.135.182:8091/wok/rec-static.html?id=wangfujing_254177&quot;&nbsp;width=&quot;800px&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;onload=&quot;this.height=parseInt(this.offsetWidth,10)/6+45+14+&#39;px&#39;&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;frameborder=&quot;no&quot;&nbsp;border=&quot;0&quot;&nbsp;marginwidth=&quot;0&quot;&nbsp;marginheight=&quot;0&quot;&nbsp;scrolling=&quot;no&quot;&nbsp;allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;	
+								</pre>
+							</div>
+						</div>
+                    </div>
+                    <div id="noiframe">
+                    	<div class="row">
+                    		<div class="span2">
+                    			非iframe嵌入代码-滑动展开(jquery)
+                    		</div>
+                    		<div class="span6">
+                    			<pre>
+&lt;script&nbsp;src=&#39;./resources/jquery/jquery-1.9.1.min.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;src=&#39;./resources/jquery/jquery.tools.min.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;src=&#39;./resources/jquery.kwicks/jquery.kwicks.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;src=&#39;./js/jquery.bfd_kw.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&#39;body&#39;).bfd_kw({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listCount:6,//默认为6
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productId:&#39;angfujing_17305246208&#39;,//商品id
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataUrl:&#39;http://192.168.3.130:6080/suit-rec/show/rec&#39;//仅在测试时需要填写
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;bgc:&#39;666&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})
+&lt;/script&gt;
+                    			</pre>
+                    		</div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="span2">非iframe嵌入代码-滑动展开(非jquery)</div>
+                    		<div class="span6">
+                    			<pre>
+&lt;script&nbsp;src=&#39;./resources/commons.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;src=&#39;./resources/scrollable.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;src=&#39;./resources/kwicks/kwicks.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;src=&#39;./js/bfd_kw_testData.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;src=&#39;./js/bfd_kw.js&#39;&nbsp;type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;bfd_kw({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container:document.body,//容器dom
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listCount:6,//默认为6
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productId:&#39;angfujing_17305246208&#39;,//商品id
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataUrl:&#39;http://192.168.3.130:6080/suit-rec/show/rec&#39;//数据地址,仅测试时需要填写
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;bgc:&#39;666&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})
+&lt;/script&gt;
+                    			</pre>
+                    		</div>
+                    	</div>
+                    </div>
+			</div>
+			<div class="span4">
+				<div class="cli">
+					<h3 style="border-bottom:1px solid #E5E5E5">联系我们</h3>
+					<h4>产品经理：呼迪</h4>
+					<p>
+						<a href="mailto:di.hu@baifendian.com">mail:di.hu@baifendian.com</a>
+						<br/>
+						<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=20961712&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:20961712:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+					</p>
+					<h4>对接技术负责人：王鹏</h4>
+					<p>
+						<a href="mailto:peng.wang@baifendian.com">mail:peng.wang@baifendian.com</a>
+						<br/>
+						<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=24274686&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:24274686:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+					</p>
+					<h4>对接技术(前瑞)：宁彬彬</h4>
+					<p>
+						 <a href="mailto:binbin.ning@baifendian.com">mail:binbin.ning@baifendian.com</a>
+						<br/>
+						<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=421099982&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:421099982:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
